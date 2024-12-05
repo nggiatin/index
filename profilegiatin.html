@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Gia Tín</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .profile-header {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .cover-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: -60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid white;
+            position: absolute;
+            top: -60px;
+            left: 20px;
+        }
+
+        .profile-info {
+            margin-left: 160px;
+            padding-top: 20px;
+        }
+
+        .profile-name {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .profile-location {
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .profile-bio {
+            margin: 10px 0;
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .video-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-card iframe {
+            width: 100%;
+            flex-grow: 1;
+        }
+
+        .video-title {
+            padding: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            background-color: #f8f9fa;
+            border-radius: 25px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border: 1px solid #dee2e6;
+        }
+
+        .social-btn i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+        .social-btn span {
+            font-size: 14px;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .social-btn:nth-child(1):hover {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .social-btn:nth-child(2):hover {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .social-btn:nth-child(3):hover {
+            background-color: #1877f2;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .profile-content {
+                margin-top: 0;
+                padding-top: 80px;
+            }
+
+            .profile-avatar {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .profile-info {
+                margin-left: 0;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-header">
+        <video src="2871916-hd_1920_1080_30fps.mp4" autoplay loop muted class="cover-video"></video>
+    </div>
+    
+    <div class="profile-content">
+        <img src="avatar.jpg" alt="Avatar" class="profile-avatar">
+        
+        <div class="profile-info">
+            <h1 class="profile-name">Nguyễn Gia Tín</h1>
+            <p class="profile-location">📍 Ho Chi Minh City, Vietnam</p>
+            <p class="profile-bio">Freelance Director of Photography - Cinematographer in Vietnam</p>
+            <div class="social-links">
+                <a href="tel:+84915577068" class="social-btn">
+                    <i class="fas fa-phone"></i>
+                    <span>+84 915.577.068</span>
+                </a>
+                <a href="mailto:your.email@example.com" class="social-btn">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                <a href="https://www.facebook.com/media/set/?set=a.125888290884400&type=3" target="_blank" class="social-btn">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="videos-grid">
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/aKAwNrl3ojA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <h3 class="video-title">Tên Video 1</h3>
+            </div>
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/Au6LqK1UH8g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <h3 class="video-title">Tên Video 2</h3>
+            </div>
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/7S-LmYA2Bts" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <h3 class="video-title">Tên Video 3</h3>
+            </div>
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/kNXBHRf3czM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <h3 class="video-title">Tên Video 4</h3>
+            </div>
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/2V1qCiI2XNQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <h3 class="video-title">Tên Video 5</h3>
+            </div>
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/0wB3u4tyN1M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <h3 class="video-title">Tên Video 6</h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.video-card iframe').forEach(iframe => {
+            const baseUrl = iframe.src;
+            iframe.parentElement.addEventListener('mouseenter', () => {
+                iframe.src = baseUrl + "?autoplay=1&mute=1";
+            });
+            iframe.parentElement.addEventListener('mouseleave', () => {
+                iframe.src = baseUrl;
+            });
+        });
+    </script>
+</body>
+</html>
